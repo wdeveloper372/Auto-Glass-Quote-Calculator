@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('deleon-logo.png'); /* Renamed for best practice */
+    background-size: cover; /* or 'contain' depending on your preference */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps logo fixed when scrolling */
+    color: #333;
+}
+
+.overlay {
+    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white background for readability */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-align: left;
+}
+
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#results {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    text-align: left;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+#results p {
+    margin: 5px 0;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #28a745; /* Green for total */
+    font-size: 1.2em;
+}
