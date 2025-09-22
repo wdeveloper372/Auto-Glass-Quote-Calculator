@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Configuration ---
     // These values can be adjusted to match business requirements.
-    const PROFIT_MARGIN_MULTIPLIER = 1.30; // Represents a 30% profit margin
-    const TAX_RATE = 0.0825;               // 8.25% sales tax
+    const PROFIT_MARGIN_MULTIPLIER = .40; // Represents a 40% profit margin
+    const TAX_RATE = 11.25;               // 8.25% sales tax
     const KIT_BASE_COST = 25.00;           // $25.00 base cost for a kit
 
     /**
