@@ -3,44 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow"> <!-- Prevents search engine indexing -->
-    <title>De Leon Auto Glass Calculator</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Auto Glass Quote Calculator</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 2rem auto; padding: 0 1rem; }
+        form div, .results div { margin-bottom: 1rem; }
+        label { display: inline-block; width: 150px; }
+        input, select { width: 150px; padding: 5px; }
+        button { padding: 8px 15px; margin-right: 10px; }
+        hr { margin: 2rem 0; }
+        h3 strong { color: #007bff; }
+        .results p { display: flex; justify-content: space-between; max-width: 320px; }
+    </style>
 </head>
 <body>
-    <div class="overlay">
-        <h1>De Leon Auto Glass Calculator</h1>
-        <form id="calculatorForm">
-            <label for="partsAmount">Parts Amount:</label>
-            <input type="number" id="partsAmount" step="0.01" required value="0">
 
-            <label for="needsKit">Does it need a kit?</label>
-            <select id="needsKit">
+    <h1>Auto Glass Quote Calculator</h1>
+
+    <form id="calculatorForm">
+        <h2>Inputs</h2>
+        <div>
+            <label for="partsAmount">Parts Amount ($):</label>
+            <input type="number" id="partsAmount" name="partsAmount" step="0.01" min="0" placeholder="e.g., 150.00">
+        </div>
+        <div>
+            <label for="needsKit">Needs Kit?</label>
+            <select id="needsKit" name="needsKit">
+                <option value="n" selected>No</option>
                 <option value="y">Yes</option>
                 <option value="n">No</option>
             </select>
-
-            <label for="labor">Labor:</label>
-            <input type="number" id="labor" step="0.01" required value="0">
-
-            <label for="calibration">Calibration Rate:</label>
-            <input type="number" id="calibration" step="0.01" required value="0">
-
+        </div>
+        <div>
+            <label for="labor">Labor Cost ($):</label>
+            <input type="number" id="labor" name="labor" step="0.01" min="0" placeholder="e.g., 100.00">
+        </div>
+        <div>
+            <label for="calibration">Calibration Cost ($):</label>
+            <input type="number" id="calibration" name="calibration" step="0.01" min="0" placeholder="e.g., 250.00">
+        </div>
+        <div>
             <button type="submit">Calculate</button>
             <button type="reset">Reset</button>
         </form>
-
-        <div id="results" aria-live="polite">
-            <p><strong>Results:</strong></p>
-            <p>Parts (incl. profit): <span id="displayParts">$0.00</span></p>
-            <p>Tax on Parts: <span id="displayPartTax">$0.00</span></p>
-            <p>Kit Cost (incl. tax): <span id="displayKitCost">$0.00</span></p>
-            <p>Labor: <span id="displayLabor">$0.00</span></p>
-            <p>Calibration: <span id="displayCalibration">$0.00</span></p>
-            <p class="highlight">Total: <span id="displayTotal">$0.00</span></p>
         </div>
+    </form>
+
+    <hr>
+
+    <div class="results">
+        <h2>Quote Summary</h2>
+        <p>Parts (with margin): <strong id="displayParts">$0.00</strong></p>
+        <p>Part Tax: <strong id="displayPartTax">$0.00</strong></p>
+        <p>Kit Cost (with tax): <strong id="displayKitCost">$0.00</strong></p>
+        <p>Labor: <strong id="displayLabor">$0.00</strong></p>
+        <p>Calibration: <strong id="displayCalibration">$0.00</strong></p>
+        <hr>
+        <h3>Total: <strong id="displayTotal">$0.00</strong></h3>
     </div>
 
+    <!-- This line loads and runs your JavaScript code -->
     <script src="script.js"></script>
+
 </body>
 </html>
