@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // These values can be adjusted to match business requirements.
     const PROFIT_MARGIN_MULTIPLIER = .40; // Represents a 40% profit margin
     const TAX_RATE = 0.1125;               // 8.25% sales tax
-    const KIT_BASE_COST = 25.00;           // $25.00 base cost for a kit
+    const KIT_BASE_COST = 22.47;           // $25.00 base cost for a kit
 
     /**
      * Formats a number into a US dollar currency string.
